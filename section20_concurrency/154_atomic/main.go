@@ -40,6 +40,5 @@ func main() {
 	wg.Wait()
 
 	fmt.Println("After waiting for all counter goroutines. numOfGoroutines:", runtime.NumGoroutine())
-	// due to race condition in read/write to shared counter var, counter will have random values
 	fmt.Println("Counter: ", counter)
 }

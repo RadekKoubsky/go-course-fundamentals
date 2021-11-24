@@ -8,7 +8,7 @@ func doSomething(x int) int {
 
 func main() {
 	// if you need to access a return value from a function running in goroutine, put
-	// that value to channel and you access later
+	// that value to channel and access later
 	ch := make(chan int)
 	go func() {
 		ch <- doSomething(5)
