@@ -9,11 +9,21 @@ func main() {
 		close(c)
 	}()
 
-	v, ok := <-c
+	/*
+		When receiving a value from a channel, we can return a status which says true for existing element in channel,
+		otherwise false
+	*/
+	v, status := <-c
 
-	fmt.Println(v, ok)
+	fmt.Println(v, status)
 
-	v, ok = <-c
+	/*
+		The last value has already been received. Returns 0 and false status
 
-	fmt.Println(v, ok)
+		After the last value has been received from a closed channel c, any receive from c will succeed without blocking,
+		returning the zero value for the channel element and false status
+	*/
+	v, status = <-c
+
+	fmt.Println(v, status)
 }
