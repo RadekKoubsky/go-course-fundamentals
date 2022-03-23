@@ -22,22 +22,26 @@ func main() {
 }
 
 func receiveOperationOnSendOnlyChannel() {
-	channel := make(chan <- int, 2)
+	channel := make(chan<- int, 2)
 
 	channel <- 42
 	channel <- 43
 
-	fmt.Println(<-channel)
-	fmt.Println(<-channel)
+	/*
+		Does not compile cannot receive from send-only channel
+		fmt.Println(<-channel)
+		fmt.Println(<-channel)*/
 	fmt.Println("------")
 	fmt.Printf("%T\n", channel)
 }
 
 func sendOperationOnReceiveOnlyChannel() {
-	channel := make(<- chan int, 2)
+	channel := make(<-chan int, 2)
 
-	channel <- 42
-	channel <- 43
+	/*
+		Does not compile, send to the receive-only type <-chan int
+		channel <- 42
+		channel <- 43*/
 
 	fmt.Println(<-channel)
 	fmt.Println(<-channel)

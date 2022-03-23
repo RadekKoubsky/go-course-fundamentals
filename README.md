@@ -14,6 +14,8 @@ Go by example [https://gobyexample.com/](https://gobyexample.com/)
 
 Composition with Go [https://www.ardanlabs.com/blog/2015/09/composition-with-go.html](https://www.ardanlabs.com/blog/2015/09/composition-with-go.html)
 
+Testable Examples in Go [https://go.dev/blog/examples](https://go.dev/blog/examples)
+
 **Advanced courses**
 
 Bill Kennedy Advanced Go Course - internals, performance, design [https://www.ardanlabs.com/education/](https://www.ardanlabs.com/education/)
