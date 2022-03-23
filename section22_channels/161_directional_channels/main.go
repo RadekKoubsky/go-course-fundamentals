@@ -13,8 +13,8 @@ you can only receive from channel
 */
 func main() {
 	bidirectionalChannel()
-	receiveOperationOnSendOnlyChannel()
-	sendOperationOnReceiveOnlyChannel()
+	//receiveOperationOnSendOnlyChannel()
+	//sendOperationOnReceiveOnlyChannel()
 
 	// assigning channels of different types
 	// generalChannel = specificChannel -> does not work
