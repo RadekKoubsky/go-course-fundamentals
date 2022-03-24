@@ -34,6 +34,11 @@ func ExampleGreet() {
 	// Welcome my dear James
 }
 
+/*
+go test -bench .
+
+Runs benchmark for all functions in dir tree starting with current dir
+*/
 func BenchmarkGreet(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		Greet("James")
